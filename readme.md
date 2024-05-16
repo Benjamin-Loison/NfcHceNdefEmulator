@@ -34,7 +34,7 @@ one time.
 A second note regarding the length of an emulated NDEF message: the maximum length of an NDEF message is 0x7FFF == (decimal) 32767 bytes, 
 but I'm limiting the length to a much smaller value (see the CAPABILITY_CONTAINER_FILE):
 
-```plaintext
+```java
     private final static byte[] CAPABILITY_CONTAINER_FILE = new byte[] {
             0x00, 0x0f, // CCLEN
             0x20, // Mapping Version
@@ -61,6 +61,5 @@ reduced to 7FFFh + FFh = 80FEh bytes.
 So Android have probably made a bug fix to match the max NDEF file size defined in the spec.
 
 Link to the documentation: http://apps4android.org/nfc-specifications/NFCForum-TS-Type-4-Tag_2.0.pdf 
-
 ```
 
